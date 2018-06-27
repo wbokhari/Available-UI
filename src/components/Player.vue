@@ -2,24 +2,20 @@
  <div class="container">
     <div class="jumbotron">
       <h1>Game Availability </h1>
-      <p> Enter your Name </p>
+      <span>Your Game vs {{ matchDetails.opposition }} on {{matchDetails.day}} {{matchDetails.date}} starting at {{matchDetails.startTime}}</span>
+      <p>Ground Address: {{ matchDetails.groundAddress }}</p>
       <form @submit.prevent="handleSubmit">
-        <input type="text" class="form-control" v-model="name" aria-label="Enter Name">
-        <p>Name is: {{ name }}</p>
+        <input type="text" class="form-control" v-model="name" placeholder="Enter Name">
         <p> Are you available? </p>
         <input type="radio" id="yes" value="Yes" v-model="picked">
         <label for="yes">Yes</label>
         <br>
         <input type="radio" id="no" value="No" v-model="picked">
         <label for="no">No</label>
-        <br>
+        <br><br>
         <button type="submit">Submit</button>
-      </form>
-      <br>
-      <span>Picked: {{ picked }}</span>
-      <br>
-      <span>Match Details: {{ matchDetails }}</span>
-      </div>
+      </form>      
+    </div>
     </div>
 </template>
 
