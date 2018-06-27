@@ -1,6 +1,6 @@
 # available-ui
 
-> A Vue.js project
+> A Vue.js project to get availability for cricket players
 
 ## Build Setup
 
